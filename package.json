@@ -1,0 +1,34 @@
+{
+  "name": "gameluncher-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"wait-on http://localhost:5173 && electron .\"",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview",
+    "start": "electron ."
+  },
+  "dependencies": {
+    "@nestjs/mongoose": "^11.0.4",
+    "adm-zip": "^0.5.17",
+    "class-transformer": "^0.5.1",
+    "class-validator": "^0.15.1",
+    "concurrently": "^9.2.1",
+    "electron": "^41.1.1",
+    "mongoose": "^9.4.1",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "wait-on": "^9.0.4",
+    "zod": "^4.3.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.12.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "typescript": "~6.0.2",
+    "vite": "^8.0.4"
+  }
+}
